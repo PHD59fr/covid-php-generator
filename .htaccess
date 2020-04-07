@@ -1,0 +1,9 @@
+AuthUserFile /home/www/.htpasswd
+AuthType Basic
+AuthName "Covid-19"
+Require valid-user
+
+<Files ~ "users.json">
+    Order Allow,Deny
+    Deny from All
+</Files>
