@@ -1,9 +1,17 @@
-AuthUserFile /home/www/.htpasswd
+AuthUserFile /PWD_OF_WEBSITE/.htpasswd
 AuthType Basic
 AuthName "Covid-19"
+
+SetEnvIf Request_URI register/ allowWithoutAuth=1
+
+<RequireAny>
+  Require env allowWithoutAuth
+  Require valid-user
+</RequireAny>
+
 Require valid-user
 
-<Files ~ "users.json">
-    Order Allow,Deny
-    Deny from All
+<Files ~ "\.dat$">
+  Order Allow,Deny
+  Deny from All
 </Files>

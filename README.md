@@ -5,37 +5,8 @@
 Ce qu'il vous faut :
 * un serveur apache (sur serveur ou mutualisé)
 
-##### /!\ Ne pas oublier de changer le répertoire absolu de votre fichier .htpasswd dans votre fichier .htaccess (AuthUserFile /home/www/.htpasswd) /!\
+##### /!\ Ne pas oublier de changer le répertoire absolu de votre fichier .htpasswd dans votre fichier .htaccess (AuthUserFile /var/www/.htpasswd) /!\
 
-### User et Pass par défaut (éditable dans l'.htpasswd):
-    user: X
-    pass: 123456
+Les données sont chiffrées avec la clef dans le fichier core/config.php (généré automatiquement à l'installation)
 
-    user: Y
-    pass: 123456
-
-
-### users.json (id = user dans le htpasswd):
-```json
-[
-    {
-        "id":"X",
-        "firstname":"X",
-        "lastname":"X",
-        "birthday":"01/02/1983",
-        "birthplace":"Lille",
-        "address":"2 Avenue Oscar Lambret",
-        "city":"Lille",
-        "zipcode":"59000"
-    },{
-        "id":"Y",
-        "firstname":"Y",
-        "lastname":"Y",
-        "birthday":"02/03/1984",
-        "birthplace":"Paris",
-        "address":"47-83 Boulevard de l'Hôpital",
-        "city":"Paris",
-        "zipcode":"75013"
-    }
-]
-```
+Les inscriptions des utilisateurs se font via l'url https://WEBSITE/register/
